@@ -39,13 +39,16 @@ body {
 }
 
 .title {
-	margin-top: 80px;
+	margin-top: 15vh;
 	span {
 		color: rgb(80, 79, 79);
 		font-size: 45px;
 	}
 }
 
+.down-arrow {
+	margin-top: 80px;
+}
 .navbar .navbar-collapse {
   text-align: center;
 }
