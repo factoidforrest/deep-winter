@@ -19,7 +19,7 @@ body {
 
 @media(max-width:768px) {
   .navbar-collapse {
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0.72) !important;
   }
 
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .services {
-	line-height: 1em;
+	//line-height: 1em;
 	h2 {
 		margin-top: 60px;
 		font-size: 48px;
@@ -111,10 +111,15 @@ body {
 	}
 	.col-md-4 {
 		margin-top: 50px;
+		p {
+			letter-spacing: 0.1px;
+			font-size: 15px;
+			font-weight: 300;
+		}
 	}
 }
 .attributions {
-	text-align: right;
-	font-size: 12px;
+	//text-align: right;
+	font-size: 10px;
 	font-color:grey;
 }
