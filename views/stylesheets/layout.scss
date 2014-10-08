@@ -68,3 +68,38 @@ body {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	}
 }
+
+.services {
+	line-height: 1em;
+	h2 {
+		margin-top: 60px;
+		font-size: 48px;
+		font-weight: 300;
+		font-family: 'Brandon', Arial, sans-serif !important;
+	}
+	h2:after {
+		content: "";
+		position: absolute;
+		width: 60px;
+		height: 2px;
+		background-color: #555;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 70px;
+	}
+	.service-icons {
+		text-align: center;
+		margin-top: 80px;
+		h3 {
+			font-size: 22px;
+			font-family: 'Brandon', Arial, sans-serif !important;
+		}
+	}
+}
+.attributions {
+	text-align: right;
+	font-size: 12px;
+	font-color:grey;
+}
