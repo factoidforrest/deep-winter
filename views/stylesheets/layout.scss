@@ -1,11 +1,11 @@
 
 
 body {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	//font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "brandon", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
-	background-color: #E7E7E5 !important;
 }
 
 .mountain-background {
@@ -17,9 +17,17 @@ body {
 	max-height: 949px;
 }
 
+@media(max-width:768px) {
+  .navbar-collapse {
+    background-color: black !important;
+  }
+
+}
+
 .navbar {
 	background-color: transparent !important;
 	border-style: none !important;
+	z-index: 1000;
 	.navbar-nav a {
 		font-size: 20px !important;
 		color: #FFF !important;
@@ -39,7 +47,12 @@ body {
 }
 
 .title {
-	margin-top: 15vh;
+	top: 70px;
+	position: absolute;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
 	span {
 		color: rgb(80, 79, 79);
 		font-size: 45px;
@@ -91,11 +104,13 @@ body {
 	}
 	.service-icons {
 		text-align: center;
-		margin-top: 80px;
 		h3 {
 			font-size: 22px;
 			font-family: 'Brandon', Arial, sans-serif !important;
 		}
+	}
+	.col-md-4 {
+		margin-top: 50px;
 	}
 }
 .attributions {
