@@ -1,9 +1,9 @@
 define ["jquery","modernizr"], ($) ->
-	#if (!Modernizr.cssvminunit)
-	setRootEm = () ->
-		height = $(window).height()
-		$('.fullscreen').css('height', height)
+	if (!Modernizr.cssvhunit)
+		setRootEm = () ->
+			height = $(window).height()
+			$('.fullscreen').css('height', height)
 
 
-	setRootEm()
-	$(window).on('resize', setRootEm)
+		setRootEm()
+		$(window).on('resize', setRootEm)
