@@ -6,15 +6,19 @@ body {
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
+	//fixes a bug where artifacts appear in the background after JS scroll
+	-webkit-backface-visibility: hidden;
 }
 
 .mountain-background {
-	background-image: url("images/mountainbackground.jpg");
+	background: url("images/mountainbackground3.jpg") no-repeat center top;
 	background-size:cover;
 	width: 100%;
-	height: 100vh;
+	//height: 100vh;
 	//the height of the image
 	max-height: 949px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
 }
 
 @media(max-width:768px) {
@@ -46,26 +50,47 @@ body {
 
 }
 
-.title {
+.introduction {
 	top: 70px;
 	position: absolute;
 	left:0;
 	right:0;
 	margin-left: auto;
 	margin-right: auto;
-	span {
-		color: rgb(80, 79, 79);
+	color: rgb(80, 79, 79);
+	//color:white;
+	.title {
+
 		font-size: 45px;
+	}
+	.description {
+
+		font-size: 20px;
 	}
 }
 
 .down-arrow {
-	top: 60vh;
+	bottom: 30px;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
+	fill: #333333;
+
+	.down-button {
+		display: inline-block;
+		polygon {
+			transition: fill 1.0s ease;
+			stroke:#EFEBCD;
+		}
+	}
+
+}
+.down-button:hover {
+	polygon {
+		fill: #D57546;
+	}
 }
 .navbar .navbar-collapse {
   text-align: center;
@@ -82,31 +107,33 @@ body {
 	}
 }
 
+.underlined-title {
+	margin-top: 60px;
+	font-size: 48px;
+	font-weight: 300;
+	font-family: 'Brandon', Arial, sans-serif !important;
+}
+.underlined-title:after {
+	content: "";
+	position: absolute;
+	width: 60px;
+	height: 2px;
+	background-color: #555;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+}
+
 .services {
 	//line-height: 1em;
-	h2 {
-		margin-top: 60px;
-		font-size: 48px;
-		font-weight: 300;
-		font-family: 'Brandon', Arial, sans-serif !important;
-	}
-	h2:after {
-		content: "";
-		position: absolute;
-		width: 60px;
-		height: 2px;
-		background-color: #555;
-		left: 0;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 70px;
-	}
 	.service-icons {
 		text-align: center;
 		h3 {
 			font-size: 22px;
 			font-family: 'Brandon', Arial, sans-serif !important;
+			color: blue;
 		}
 	}
 	.col-md-4 {
@@ -118,6 +145,62 @@ body {
 		}
 	}
 }
+
+.about {
+	margin-top: 60px;
+	background: #333333;
+	//background: linear-gradient(0deg, #303030 95%, white);
+	color: whitesmoke;
+	//border-top
+}
+
+.quote {
+	background: url("images/creek.jpg") no-repeat center center;
+	min-height: 400px;
+}
+
+.projects {
+	color:white;
+	background: #333333;
+	.logos {
+		margin-top: 50px;
+	}
+	h2 {
+	}
+	h2:after{
+		background-color: white;
+	}
+	.col-md-3 {
+		margin-top: 30px;
+		text-align: center;
+		h2 {
+			position: absolute;
+			top: 30%;
+			color: white;
+			width: 200px;
+	    //left:0;
+	    //right:0;
+	    //margin-left:auto;
+	    //margin-right:auto;
+		}
+	}
+
+	a {
+		display:inline-block;
+	}
+	img {
+		border-radius: 10px;
+		box-shadow: 0 0 5px white;
+		height: 200px;
+		width: 200px;
+		transition: box-shadow 0.25s ease;
+		margin: 0 auto;
+	}
+	img:hover{
+		box-shadow: 0 0 15px white;
+	}
+}
+
 .attributions {
 	//text-align: right;
 	font-size: 10px;

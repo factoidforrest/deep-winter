@@ -1,3 +1,4 @@
+doctype html
 html(lang="en")
   head
     title Deep Winter
@@ -8,7 +9,7 @@ html(lang="en")
     link(rel="stylesheet", type="text/css", href="layout.css")
     script(data-main="main", src="libs/require.js")
   body
-    .mountain-background
+    .mountain-background.fullscreen
       nav(class="navbar navbar-inverse", role="navigation")
         .container
           .navbar-header
@@ -20,72 +21,31 @@ html(lang="en")
           .collapse.navbar-collapse#main-nav
             ul.nav.navbar-nav.navbar-right
               li
-                a(href=".") About
+                a.scroll-btn(href="#", data-scroll=".services") Services
               li
-                a(href="projects") Projects
+                a.scroll-btn(href="#", data-scroll=".about") About me
               li
-                a(href="resume") Resume
+                a.scroll-btn(href="#", data-scroll=".projects") Portfolio
               li
-                a(href="contact") Contact
-      .title.text-center
-        span Deep Winter Development
+                a.scroll-btn(href="#", data-scroll=".services") Resume
+              li
+                a.scroll-btn(href="#", data-scroll=".services") Contact
+      .introduction.text-center
+        p.title Deep Winter Development
+        p.description Web Apps in Rails and Node
+
 
       .down-arrow.text-center
-        img(src="images/arrow.svg")
-    .services
-      .container
-        .row.text-center
-          h2 SERVICES
-        .service-icons
-          .col-md-4
-            img(src="images/idea.svg")
-            h3 BRAINSTORM
-            p 
-              | We discuss your idea for free.
-              | Our goal is to understand not just what you want but also why.
-          .col-md-4
-            img(src="images/design2.svg")
-            h3 DESIGN
-            p
-              | We use sketches and moch-ups to find the perfect form to your taste without sacrificing function.
-          .col-md-4
-            img(src="images/develop.svg")
-            h3 DEVELOP
-            p
-              | Fluent in a variety of technologies, our engineers use
-              | the right tool for the job to deliver the best product in the least amount of time.
-      .container
-        .row.text-center
-          h2 FEATURES
-        .service-icons
-          .col-md-4
-            img(src="images/responsive.svg")
-            h3 RESPONSIVE
-            p
-              | Our mobile first philosophy ensures that your site will look great on any device.
-          .col-md-4
-            img(src="images/fast.svg")
-            h3 FAST
-            p
-              | Compression and asynchronous asset loading makes our sites fly.
-          .col-md-4
-            img(src="images/secure.svg")
-            h3 SECURE
-            p
-              | Attention to security and thourough penetration testing mean your data stays safe and secure.
-
-    .attributions.text-center
-      p.
-        Arrow designed by <a href="http://www.thenounproject.com/adamatmullin">Adam  Mullin</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
-      p.
-        Daydreaming designed by <a href="http://www.thenounproject.com/lshaull">Lorie Shaull</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
-      p.
-        Landscape Architect designed by <a href="http://www.thenounproject.com/Joelseph1985">Joel Burke</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
-      p.
-        Web Development designed by <a href="http://www.thenounproject.com/wilsonjoseph">Wilson Joseph</a> from the <a href="http://www.thenounproject.com">Noun Project</a>  
-      p.
-        Responsive Design designed by <a href="http://www.thenounproject.com/derekjp">Derek Palladino</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
-      p.
-        Stopwatch designed by <a href="http://www.thenounproject.com/MRFADesigns">Martha Ormiston</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
-      p.
-        Lock designed by <a href="http://www.thenounproject.com/johncaserta">John Caserta</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
+        .down-button.scroll-btn(data-scroll=".services")
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="-15.423 -2.27 100 100" enable-background="new -15.423 -2.27 100 100" xml:space="preserve">
+          <defs>
+          </defs>
+          <rect x="18.042" y="67.72" width="33.068" height="5.158"/>
+          <polygon points="13.715,41.831 24.159,54.445 34.604,67.059 45.021,54.422 55.438,41.785 46.237,41.795 40.518,21.847 34.255,0   28.313,21.937 22.928,41.82 "/>
+          <path d="M49.189,26.677l-2.071,5.585c9.289,4.317,15.675,13.276,15.675,23.634c0,14.574-12.634,26.388-28.218,26.388  c-15.581,0-28.213-11.813-28.213-26.388c0-10.589,6.674-19.716,16.299-23.917l-2.146-5.54C8.429,31.557,0,43.054,0,56.427  c0,18.128,15.481,32.824,34.575,32.824c19.096,0,34.578-14.696,34.578-32.824C69.153,43.256,60.979,31.905,49.189,26.677z"/>
+          </svg>
+      //img.down-button(src="images/arrow.svg")
+    include services
+    include about
+    include quote
+    include projects
