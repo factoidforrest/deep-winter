@@ -108,10 +108,11 @@ body {
 }
 
 .underlined-title {
-	margin-top: 60px;
+	margin-top: 80px;
 	font-size: 48px;
 	font-weight: 300;
 	font-family: 'Brandon', Arial, sans-serif !important;
+	text-align: center;
 }
 .underlined-title:after {
 	content: "";
@@ -162,6 +163,7 @@ body {
 .projects {
 	color:white;
 	background: #333333;
+	padding-bottom: 100px;
 	.logos {
 		margin-top: 50px;
 	}
@@ -173,31 +175,62 @@ body {
 	.col-md-3 {
 		margin-top: 30px;
 		text-align: center;
+
+	}
+
+	a {
+		display:inline-block;
+	}
+	a:hover {
+		img {
+			//box-shadow: 0 0 15px white;
+			opacity: 0.25;
+		}
+		.description {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	.description {
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		color:white;
+		width: 200px;
+		color: white;
+		text-align: center;
 		h2 {
 			position: absolute;
-			top: 30%;
-			color: white;
+			top: 25px;
 			width: 200px;
 	    //left:0;
 	    //right:0;
 	    //margin-left:auto;
 	    //margin-right:auto;
 		}
-	}
-
-	a {
-		display:inline-block;
+		p {
+			position: absolute;
+			top: 100px;
+			width: 200px;
+			padding: 0 15px;
+		}
 	}
 	img {
 		border-radius: 10px;
 		box-shadow: 0 0 5px white;
 		height: 200px;
 		width: 200px;
-		transition: box-shadow 0.25s ease;
+		//transition: box-shadow 0.5s ease 0.5s;
 		margin: 0 auto;
+		transition: opacity 0.5s ease;
+		opacity: 1;
 	}
-	img:hover{
-		box-shadow: 0 0 15px white;
+
+}
+
+.contact {
+	form {
+		margin-top: 100px;
 	}
 }
 
