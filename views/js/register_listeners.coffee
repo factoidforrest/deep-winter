@@ -19,14 +19,17 @@ define ["jquery", "spin", "ladda"], ($, spin, Ladda) ->
     success = (data) ->
       console.log("submitted successfully")
       console.log(data)
+      $('.error-container').html(data)
       l.stop()
     
     error = (xhr, error, reason) ->
-      console.log("the request failed because: ", reason)
+      console.log("the request failed because: ", error, reason)
       l.stop()
 
     ajaxSettings = {
       type: "POST"
+      #dataType: "postData"
+      #contentType: "text"
       url: url
       data: $("#contact-form").serialize()
       success: success

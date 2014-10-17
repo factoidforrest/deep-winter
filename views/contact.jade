@@ -2,11 +2,12 @@
 	.container
 		h2.underlined-title Contact Me
 		form#contact-form(role="form")
+			.error-container.col-md-6.col-md-offset-3.text-center
 			.col-md-5.col-md-offset-1
-				input.form-group.form-control#name(type="text", placeholder="Email")
-				input.form-group.form-control#email(type="email", placeholder="Name")
-				input.form-group.form-control#subject(type="text", placeholder="Subject")
+				input.form-group.form-control#name(name="name", type="text", placeholder="Name")
+				input.form-group.form-control#email(name="email", type="email", placeholder="Email")
+				input.form-group.form-control#subject(name="subject", type="text", placeholder="Subject")
 			.col-md-6
-				textarea.form-group.form-control#message(type="text", placeholder="Message", rows="6")
+				textarea.form-group.form-control#message(name="message", type="text", placeholder="Message", rows="6")
 			.col-md-2.col-md-offset-5.form-group
 				button.btn-primary.form-input.btn-block.btn.ladda-button#form-submit(data-style="expand-right") Send

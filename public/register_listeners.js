@@ -21,10 +21,11 @@ define(["jquery", "spin", "ladda"], function($, spin, Ladda) {
     success = function(data) {
       console.log("submitted successfully");
       console.log(data);
+      $('.error-container').html(data);
       return l.stop();
     };
     error = function(xhr, error, reason) {
-      console.log("the request failed because: ", reason);
+      console.log("the request failed because: ", error, reason);
       return l.stop();
     };
     ajaxSettings = {

@@ -6,6 +6,7 @@ handlers = require('./server/handlers')
 sass = require('node-sass')
 path = require('path')
 favicon = require('serve-favicon')
+bodyParser = require('body-parser')
 
 production = process.env.PRODUCTION == 'true'
 
@@ -36,6 +37,9 @@ if production
 	cachetime = 86400000
 else
 	cachetime = 0
+
+app.use bodyParser.json()
+app.use bodyParser.urlencoded()
 
 #static assets
 app.use(express.static(__dirname + '/public', { maxAge: cachetime }))
