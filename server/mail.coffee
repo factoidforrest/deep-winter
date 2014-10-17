@@ -13,7 +13,7 @@ server = email.server.connect(
 module.exports = (params, res) ->
 # send the message and get a callback with an error or details of the message that was sent
   server.send 
-    text: params.message + "\r\n -" + params.name
+    text: params.message + "\r\n - " + params.name
     from: params.email
     to: "deepwinterdevelopment@gmail.com"
     subject: params.subject
