@@ -2,11 +2,22 @@ requirejs.config({
   paths: {
     jquery: ["libs/jquery.min"],
     bootstrap: ["libs/bootstrap/js/bootstrap.min"],
-    modernizr: ["libs/modernizr"]
+    modernizr: ["libs/modernizr"],
+    spin: ["libs/ladda/spin.min"],
+    ladda: ["libs/ladda/ladda.min"]
   },
   shim: {
-    bootstrap: ["jquery"]
+    bootstrap: ["jquery"],
+    "spin": {
+      exports: "Spinner"
+    },
+    "ladda": {
+      depends: "spin",
+      exports: "Ladda"
+    }
   }
 });
 
-require(["jquery", "bootstrap", "register_listeners", "viewport_hack"], function($) {});
+require(["jquery", "ladda", "bootstrap", "register_listeners", "viewport_hack"], function($, Ladda) {
+  return window.ladda = Ladda;
+});

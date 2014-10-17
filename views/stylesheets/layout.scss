@@ -11,7 +11,7 @@ body {
 }
 
 .mountain-background {
-	background: url("images/mountainbackground3.jpg") no-repeat center top;
+	background: url("images/mountainbackgroundlowres.jpg") no-repeat center top;
 	background-size:cover;
 	width: 100%;
 	height: 100vh;
@@ -25,6 +25,7 @@ body {
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.72) !important;
   }
+
 
 }
 
@@ -159,7 +160,16 @@ body {
 	background: url("images/creek.jpg") no-repeat center center;
 	min-height: 400px;
 }
-
+@mixin show-description {
+	img {
+		//box-shadow: 0 0 15px white;
+		opacity: 0.25;
+	}
+	.description {
+		visibility: visible;
+		opacity: 1;
+	}
+}
 .projects {
 	color:white;
 	background: #333333;
@@ -181,15 +191,11 @@ body {
 	a {
 		display:inline-block;
 	}
+
+
+
 	a:hover {
-		img {
-			//box-shadow: 0 0 15px white;
-			opacity: 0.25;
-		}
-		.description {
-			visibility: visible;
-			opacity: 1;
-		}
+		@include show-description;
 	}
 	.description {
 		visibility: hidden;
@@ -227,10 +233,23 @@ body {
 	}
 
 }
-
+//show the project description always on mobile, since they cant hover
+@media(max-width:768px) {
+  .projects {
+  	a {
+  		@include show-description;
+  	}
+  }
+}
 .contact {
 	form {
 		margin-top: 100px;
+		input{
+			background: rgb(247, 247, 247);
+		}
+		textarea{
+			background: rgb(247, 247, 247);
+		}
 	}
 }
 

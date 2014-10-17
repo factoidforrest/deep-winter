@@ -8,16 +8,23 @@ requirejs.config
     # Load bootstrap from cdn. On fail, load local file. 
     bootstrap: ["libs/bootstrap/js/bootstrap.min"]
     modernizr: ["libs/modernizr"]
+    spin: ["libs/ladda/spin.min"]
+    ladda: ["libs/ladda/ladda.min"]
 
-  shim:
-    
-  # Set bootstrap dependencies (just jQuery) 
-    bootstrap: ["jquery"]
+  shim: {
+    bootstrap: ["jquery"],
+    "spin": {exports: "Spinner"}
+    "ladda": {
+      depends: "spin",
+      exports: "Ladda"
+    }
 
-
+  }
 require [
   "jquery"
+  "ladda"
   "bootstrap"
   "register_listeners"
   "viewport_hack"
-], ($) -> 
+], ($, Ladda) -> 
+  window.ladda = Ladda

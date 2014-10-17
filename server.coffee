@@ -42,6 +42,7 @@ app.use(express.static(__dirname + '/public', { maxAge: cachetime }))
 
 #static file routes
 app.get('/:section?', handlers.root)
+app.post('/contact', handlers.contact)
 
 app.listen(process.env.PORT || 3000)
 
