@@ -1,9 +1,10 @@
-sudoku
+Deep Winter Development
 ======
 
 ### About
 
-My node project starter
+My home page
+
 ### Development Setup
 
 Install npm and node. 
