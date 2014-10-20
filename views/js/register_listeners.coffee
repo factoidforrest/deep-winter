@@ -1,5 +1,6 @@
 define ["jquery", "spin", "ladda"], ($, spin, Ladda) ->
 
+  #page scrolling logic
   $('.scroll-btn').click () ->
     console.log('scroll btn clicked')
     scrollTo = $(this).attr('data-scroll')
@@ -10,7 +11,7 @@ define ["jquery", "spin", "ladda"], ($, spin, Ladda) ->
   scroll = (selector) ->
     $('html,body').animate({scrollTop: $(selector).offset().top}, 'slow')
 
-  
+  #contact form logic
   $("#contact-form").submit (e) -> 
     e.preventDefault()
     l = Ladda.create($('#form-submit')[0])
@@ -24,6 +25,7 @@ define ["jquery", "spin", "ladda"], ($, spin, Ladda) ->
     
     error = (xhr, error, reason) ->
       console.log("the request failed because: ", error, reason)
+      alert("Error connecting to server, please check your connection")
       l.stop()
 
     ajaxSettings = {

@@ -26,6 +26,7 @@ define(["jquery", "spin", "ladda"], function($, spin, Ladda) {
     };
     error = function(xhr, error, reason) {
       console.log("the request failed because: ", error, reason);
+      alert("Error connecting to server, please check your connection");
       return l.stop();
     };
     ajaxSettings = {
