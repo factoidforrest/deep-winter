@@ -1,4 +1,5 @@
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200);
 
 body {
 	//font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -112,7 +113,7 @@ body {
 	margin-top: 60px;
 	font-size: 48px;
 	font-weight: 300;
-	font-family: 'Brandon', Arial, sans-serif !important;
+	font-family: 'Montserrat', Arial, sans-serif !important;
 	text-align: center;
 }
 .underlined-title:after {
@@ -149,6 +150,7 @@ body {
 }
 
 .about {
+	padding-top: 25px;
 	margin-top: 60px;
 	background: #333333;
 	//background: linear-gradient(0deg, #303030 95%, white);
@@ -157,11 +159,24 @@ body {
 	.technologies {
 		text-align:center;
 	}
+	padding-bottom: 50px;
+	.paragraphs {
+		display: inline-block;
+		border-bottom-style: solid;
+		padding-bottom: 30px;
+	}
+	
 }
 
 .quote {
-	background: url("images/creek.jpg") no-repeat center center;
+	//background: url("images/creek.jpg") no-repeat center center;
+	background: #284F78;
 	min-height: 400px;
+	img {
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+	}
 }
 @mixin show-description {
 	img {
