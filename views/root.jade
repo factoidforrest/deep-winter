@@ -9,6 +9,9 @@ html(lang="en")
     link(href="libs/ladda/ladda-themeless.min.css", rel="stylesheet")
     link(rel="stylesheet", type="text/css", href="layout.css")
     script(data-main="main", src="libs/require.js")
+    //would be faster to precomute this on server startup and pass into the template
+    if process.env.PRODUCTION === 'true' 
+      include analytics
   body
     .mountain-background.fullscreen
       nav(class="navbar navbar-inverse", role="navigation")
