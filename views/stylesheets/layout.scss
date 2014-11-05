@@ -216,7 +216,21 @@ body {
 
 	a {
 		display:inline-block;
+		//margin-left: 9.45%;
 	}
+
+/* centered columns styles used for projects */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    //text-align:center;
+    /* inline-block space fix */
+    margin-right: 0px;
+}
 
 
 
