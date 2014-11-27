@@ -28,3 +28,4 @@ require [
   "viewport_hack"
 ], ($, Ladda) -> 
   window.ladda = Ladda
+  console.log 'JS loaded'
