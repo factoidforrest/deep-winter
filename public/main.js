@@ -18,7 +18,7 @@ requirejs.config({
   }
 });
 
-require(["jquery", "ladda", "bootstrap", "register_listeners", "viewport_hack"], function($, Ladda) {
+require(["jquery", "ladda", "bootstrap", "register_listeners", "viewport_hack", "svg_replacement"], function($, Ladda) {
   window.ladda = Ladda;
   return console.log('JS loaded');
 });

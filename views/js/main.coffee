@@ -26,6 +26,7 @@ require [
   "bootstrap"
   "register_listeners"
   "viewport_hack"
+  "svg_replacement"
 ], ($, Ladda) -> 
   window.ladda = Ladda
   console.log 'JS loaded'
