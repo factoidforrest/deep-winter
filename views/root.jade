@@ -5,12 +5,13 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(http-equiv="Cache-control", content="public")
     meta(name="format-detection",content="telephone=no")
+    meta(property="og:image", content="images/develop.svg")
     link(href="libs/bootstrap/css/bootstrap.min.css", rel="stylesheet")
     link(href="libs/ladda/ladda-themeless.min.css", rel="stylesheet")
     link(rel="stylesheet", type="text/css", href="layout.css")
     link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
     script(data-main="main", src="libs/require.js")
-    //would be faster to precomute this on server startup and pass into the template
+    //would be faster to precompute this on server startup and pass into the template. must be some overhead with checking env vars
     if process.env.PRODUCTION === 'true' 
       include analytics
   body
@@ -50,7 +51,7 @@ html(lang="en")
       //img.down-button(src="images/arrow.svg")
     include services
     include about
-    include quote
+    //include quote
     include projects
     include contact
     include footer

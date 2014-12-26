@@ -1,7 +1,7 @@
 .contact
 	.container
 		h2.text-center.title Contact Me
-		form#contact-form(role="form")
+		form#contact-form(role="form",autocomplete="off")
 			p.explanation
 				| Want to talk about your project? Just want to chat?  Don't hesitate to get in touch. <br> 
 				| You can use this form or email me at 
@@ -12,6 +12,6 @@
 				input.form-group.form-control#email(name="email", type="email", placeholder="Email")
 				input.form-group.form-control#subject(name="subject", type="text", placeholder="Subject")
 			.col-md-6
-				textarea.form-group.form-control#message(name="message", type="text", placeholder="Message", rows="6")
+				textarea.form-group.form-control#message(name="message", type="text", placeholder="Message", rows="7")
 			.col-md-2.col-md-offset-5.form-group
 				button.btn-primary.form-input.btn-block.btn.ladda-button#form-submit(data-style="expand-right") Send
