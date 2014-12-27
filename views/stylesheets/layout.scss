@@ -198,7 +198,9 @@ body {
 	//background: -ms-linear-gradient(top,  rgba(0,0,0,0) 90%,rgba(0,0,0,0) 92%,rgba(0,0,0,1) 100%); /* IE10+ */
 	//background: linear-gradient(to bottom,  rgba(0,0,0,0) 90%,rgba(0,0,0,0) 92%,rgba(0,0,0,1) 100%); /* W3C */
 	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-	background: url("images/cyber.jpg") no-repeat center top;
+	background:black;
+	//background: url("images/cyber.jpg") no-repeat center top;
+	
 	background-size: cover;
 }
 
