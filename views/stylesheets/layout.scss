@@ -331,6 +331,17 @@ body {
 		textarea {
 			height: 134px;
 		}
+		#name {
+			border-top-left-radius: 15px;
+		}
+		#subject {
+			border-bottom-left-radius: 15px;
+		}
+		#message {
+			border-bottom-right-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+
 	}
 
 		// Change the white to any color ;)
