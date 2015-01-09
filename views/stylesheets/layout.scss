@@ -141,8 +141,23 @@ body {
 .services {
 	//line-height: 1em;
 	background: black;
-	padding-bottom:60px;
+	//padding-bottom:60px;
+	.technologies {
+		text-align:center;
 
+		.technology-names {
+			padding-top:40px;
+		}
+
+		.col-centered {
+			padding-top:20px;
+			letter-spacing: 0.1px;
+			font-size: 24px;
+			font-weight: 300;
+			line-height: 24px;
+			color:#999898;
+		}
+	}
 	
 
 
@@ -175,24 +190,19 @@ body {
 
 .about {
 	line-height: 25px;
-	padding-top: 25px;
+	//padding-top: 25px;
 	
 	//background: #333333;
 	//background: linear-gradient(0deg, #303030 95%, white);
 	color: whitesmoke;
 	//border-top
-	.technologies {
-		text-align:center;
-		.col-centered {
-			padding-top:20px;
-		}
-	}
+
 	padding-bottom: 50px;
 	.paragraphs {
-		padding-top:20px;
+		padding-top:60px;
 		display: inline-block;
-		border-bottom-style: solid;
-		border-width: 1px;
+		//border-bottom-style: solid;
+		//border-width: 1px;
 		padding-bottom: 30px;
 	}
 	//background-image: url("images/cyber.jpg") no-repeat center top;
