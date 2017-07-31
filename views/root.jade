@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title Deep Winter
+    title Deep Winter Development
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(http-equiv="Cache-control", content="public")
     meta(name="format-detection",content="telephone=no")
@@ -14,6 +14,7 @@ html(lang="en")
     //would be faster to precompute this on server startup and pass into the template. must be some overhead with checking env vars
     if process.env.PRODUCTION === 'true' 
       include analytics
+    meta(name="description", content="NodeJS web development company with a focus on modern, secure, and maintainable applications."
   body
     .mountain-background.fullscreen
       nav(class="navbar navbar-inverse", role="navigation")

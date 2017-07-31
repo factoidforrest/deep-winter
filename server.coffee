@@ -4,6 +4,7 @@ app = express()
 coffeescript = require('connect-coffee-script')
 handlers = require('./server/handlers')
 sass = require('node-sass')
+sassMiddleware = require('node-sass-middleware')
 path = require('path')
 favicon = require('serve-favicon')
 bodyParser = require('body-parser')
@@ -18,7 +19,7 @@ app.locals.uglify = production
 
 app.set('view engine', 'jade')
 
-app.use(sass.middleware({
+app.use(sassMiddleware({
   src: __dirname + '/views/stylesheets',
   dest: __dirname + '/public',
   debug: !production,
